@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49n-Ly-ERL">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Three Dee View Controller-->
+        <scene sceneID="boo-I6-yGc">
+            <objects>
+                <viewController id="49n-Ly-ERL" customClass="ThreeDeeViewController" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRo-yl-ZME">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SPx-0t-Aai">
+                                <rect key="frame" x="18" y="832" width="378" height="31"/>
+                                <connections>
+                                    <action selector="slide:" destination="49n-Ly-ERL" eventType="valueChanged" id="n6z-IM-qOD"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SPx-0t-Aai" firstAttribute="bottom" secondItem="ZRt-4Z-mfr" secondAttribute="bottom" id="Lyt-05-zet"/>
+                            <constraint firstItem="ZRt-4Z-mfr" firstAttribute="trailing" secondItem="SPx-0t-Aai" secondAttribute="trailing" constant="20" id="mSE-iC-TDY"/>
+                            <constraint firstItem="SPx-0t-Aai" firstAttribute="leading" secondItem="ZRt-4Z-mfr" secondAttribute="leading" constant="20" id="tBF-LF-KVf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZRt-4Z-mfr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAl-HT-QKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710.14492753623199" y="-104.46428571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-xt-aqF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktv-uR-k3c" customClass="DrawingLayer" customModule="demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCw-9N-iJB" customClass="DrawingView" customModule="demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nUi-xt-aqF" secondAttribute="trailing" id="820-6A-1Nz"/>
+                            <constraint firstAttribute="bottom" secondItem="nUi-xt-aqF" secondAttribute="bottom" id="K1o-c8-Gml"/>
+                            <constraint firstItem="nUi-xt-aqF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jjx-aY-90C"/>
+                            <constraint firstItem="nUi-xt-aqF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="whg-sQ-DQ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Keyframe Animation View Controller-->
+        <scene sceneID="vkx-8f-UNh">
+            <objects>
+                <viewController id="TrG-yv-EYj" customClass="KeyframeAnimationViewController" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5m-r0-oGK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e6X-K9-brN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fi5-AP-LBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="9"/>
+        </scene>
+    </scenes>
+</document>
