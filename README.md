@@ -24,6 +24,9 @@ view.layer.frame =
 
 * If you work directly with a layer, you get way more control.
 
+* CALayers and Core Animation is 2D. 
+* it's 2D objects in 3D space.
+
 ## Path
 
 * 2.0
